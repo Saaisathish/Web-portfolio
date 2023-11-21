@@ -8815,6 +8815,103 @@ h1, h2, h3, h4, h5,
     letter-spacing: 3px;
     text-transform: uppercase; }
 
+    .custom-box {
+      
+      margin-bottom: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 5px;
+      overflow: hidden;
+  }
+  
+  .custom-box .box-container {
+      position: relative;
+      height: 300px; /* Adjust the height as needed */
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      transition: transform 0.3s ease;
+  }
+  
+  .custom-box .box-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+      
+      width: 100%;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+  
+  .custom-box:hover .box-content {
+      opacity: 1;
+  }
+  
+  .custom-box:hover .box-container {
+      transform: scale(1.05); /* Increase scale on hover */
+  }
+  
+  .custom-box .date {
+      font-weight: 900;
+      font-size: 26px;
+      color: #ffbd39;
+  }
+  
+  .custom-box h2 {
+      font-size: 26px;
+  }
+  
+  .custom-box .position {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+  }
+  .equal-height-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-box {
+    flex-grow: 1;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+  
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* 
+body.dark-mode {
+  background-color: red !important;
+  color: white;
+} */
+
+.google-form-embed {
+  width: 100%; /* Adjust width as needed */
+  /* max-width: 600px; Set a max-width to prevent form from becoming too wide */
+  height: 80vh; /* Set the desired height, here 80% of viewport height */
+  align-items: center;
+} 
+
+
+
 .services-1 {
   margin-bottom: 40px;
   padding: 2em;

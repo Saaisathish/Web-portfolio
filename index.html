@@ -22,9 +22,256 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    /* Light Mode */
+    .light-mode {
+      background-color: #ffffff;
+      color: #333333 !important;
+    }
+    
+    /* Dark Mode */
+    .dark-mode {
+      background-color: black;
+      color: #ffffff !important;
+    }
+    
+    /* Toggle Button Style */
+    .toggle-btn {
+      padding: 8px 16px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-size: 16px;
+	}
+
+	  .dark-mode .navbar-brand {
+  color: #fff !important;
+}
+
+.heading-section .subheading {
+  color: #5e5e5e;
+}
+
+.heading-section h2 {
+  color: #333333;
+}
+.dark-mode .heading-section .subheading {
+  color: #fff;
+}
+
+.dark-mode .heading-section h2 {
+  color: #fff;  
+}
+.dark-mode a {
+  color: #fff;
+}
+.dark-mode .slider-text .subheading {
+  color: #fff; 
+}
+
+.dark-mode .slider-text h1,
+.dark-mode .slider-text h2 {
+  color: #fff;
+}
+
+.dark-mode .slider-text .btn-primary {
+  color: #fff; 
+}
+
+.dark-mode .slider-text .btn-white {
+  color: #000;
+}
+.dark-mode .heading-section h1,
+.dark-mode .heading-section h2 {
+  color: #fff;
+}
+.dark-mode .navbar-nav a {
+  color: #fff; 
+}
+
+/* Light Mode */
+
+.light-mode .navbar-nav a {
+  color: #000;
+}
+
+.light-mode .navbar-brand {
+  color: #000;
+}
+
+.light-mode .slider-text .subheading,  
+.light-mode .slider-text h1,
+.light-mode .slider-text h2 {
+  color: #000; 
+}
+
+.light-mode .slider-text .btn-primary {
+  color: #fff;
+}
+
+.light-mode .slider-text .btn-white {
+  color: #000;
+}
+
+
+.navbar-nav a {
+  color: #fff; 
+}
+
+/* Light Mode Styles */
+
+.light-mode .navbar-nav a {
+  color: #000;
+}
+
+/* Light Mode Styles */
+
+.light-mode .about-info li span:first-child {
+  color: #000;
+}
+
+.light-mode .about-info li span {
+  color: #000;  
+}
+
+/* Default Styles */
+
+.about-info li span:first-child {
+  color: #999999;
+}
+
+.about-info li span {
+  color: #000000;  
+}
+
+
+/* Dark Mode Styles */
+
+.dark-mode .about-info li span:first-child {
+  color: #fff;
+}
+
+.dark-mode .about-info li span {
+  color: #fff;
+}
+
+
+/* Light Mode Styles */
+
+.light-mode .about-info li span:first-child {
+  color: #000;
+}
+
+.light-mode .about-info li span {
+  color: #000;
+}
+
+/* Default styles */
+
+.about-info li .d-flex span:first-child {
+  color: #999;
+}
+
+/* Dark Mode */ 
+
+.dark-mode .about-info li .d-flex span:first-child {
+  color: #fff;
+}
+
+/* Light Mode */
+
+.light-mode .about-info li .d-flex span:first-child {
+  color: #000; 
+}
+
+/* Default Styles */
+
+.progress-wrap h3 {
+  color: #000;
+}
+
+
+/* Dark Mode Styles */
+
+.dark-mode .progress-wrap h3 {
+  color: #fff !important;
+}
+
+.theme-switch-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px; 
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Styles for slider */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+  </style>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="light-mode">
 	  
-	  
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Saaisathish</a>
@@ -33,7 +280,7 @@
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
+	        <ul class=" nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
@@ -41,10 +288,22 @@
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Certificates</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+		
 	        </ul>
 	      </div>
 	    </div>
+		<div class="theme-switch-wrapper">
+			
+			<label class="theme-switch">
+			  <input type="checkbox" id="theme-toggle"> 
+			  <div class="slider round"></div>
+			</label>
+		  
+		  </div>
 	  </nav>
+
+	  
+	  
 	  <section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	      <div class="slider-item ">
@@ -56,10 +315,11 @@
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Saaisathish</span></h1>
-			            <h2 class="mb-4">Aspiring Software Engineer</h2>
-			            <p><a href="https://www.linkedin.com/in/saai-sathish-s-a-10441016a/" class="btn btn-primary py-3 px-4">Linkedin</a> <a href="#resume-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		          		<span class="subheading">Hello!
+			            <h1 class="mb-4 mt-3"><span>I'm Saaisathish</h1></span>
+			            <div class="mb-4 mt-3" style="font-weight: 1000; size: 1000px;">Aspiring Software Engineer</div>
+					</span>
+			            <p><a href="https://www.linkedin.com/in/saai-sathish-s-a-10441016a/" class="btn btn-primary py-3 px-4">Linkedin</a> <a href="#resume-section" class="btn btn-primary py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -75,9 +335,9 @@
 	          	</div>
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
-		          		<span class="subheading">Also</span>
-			            <h1 class="mb-4 mt-3">Grauduate student <span>at Saint Louis University</span> Missouri</h1>
-			            <p><a href="https://www.linkedin.com/in/saai-sathish-s-a-10441016a/" class="btn btn-primary py-3 px-4">Linkedin</a> <a href="#resume-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		          		<span class="subheading">Also,</span>
+			            <h1 class="mb-4 mt-3"><span> Student at Saint Louis University Missouri</span></h1>
+			            <p><a href="https://www.linkedin.com/in/saai-sathish-s-a-10441016a/" class="btn btn-primary py-3 px-4">Linkedin</a> <a href="#resume-section" class="btn btn-primary py-3 px-4">My works</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -99,23 +359,23 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
+		          	<!-- <h1 class="big">About</h1> -->
 		            <h2 class="mb-4">About Me</h2>
 		            <ul class="about-info mt-4 px-md-0 px-2">
-		            	<li class="d-flex"><span>Name:</span> <span>Saaisathish Sankarabhattar Ayyappan</span></li>
-		            	<li class="d-flex"><span>Date of birth:</span> <span>July 22, 2000</span></li>
-		            	<li class="d-flex"><span>Address:</span> <span>529 Whittier St.Louis</span></li>
-		            	<li class="d-flex"><span>Zip code:</span> <span>63108</span></li>
-		            	<li class="d-flex"><span>Email:</span> <span>sa.saaisathish@gmail.com</span></li>
-		            	<li class="d-flex"><span>Phone: </span> <span>+1(720)5374530</span></li>
+		            	<li class="d-flex">Name:  Saaisathish Sankarabhattar Ayyappan</li>
+		            	<li class="d-flex">Date of birth:  July 22, 2000</li>
+		            	<li class="d-flex">Address:  529 Whittier St.Louis</li>
+		            	<li class="d-flex">Zip code:  63108</li>
+		            	<li class="d-flex">Email:  sa.saaisathish@gmail.com</li>
+		            	<li class="d-flex">Phone: +1(720)5374530</li>
 		            </ul>
 		          </div>
 		        </div>
 	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
               <div class="text">
               	<p class="mb-4">
-	                <span class="number" data-number="5">0</span>
-	                <span>Project complete</span>
+	                <!-- <span class="number" data-number="5">0</span> -->
+	                <span>Over 2 years of experience in Software development</span>
                 </p>
                 <p><a href="certificates/Saai-mainCV.pdf" class="btn btn-primary py-3 px-3">Download CV</a></p>
               </div>
@@ -129,45 +389,60 @@
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Here is my contents in the Resume for your reference</p>
+          	<!-- <h1 class="big big-2">Resume</h1> -->
+            <h2 class="mb-4">Education and Professional experience</h2>
+           
           </div>
         </div>
-    		<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">June 2018- May 2022</span>
-    					<h2>Bacheolor of technology in Computer Science</h2>
-						<!-- <h3>B.Tech CSE</h3> -->
-    					<span class="position">SRM University Chennai</span>
-    					<p class="mt-4">Gained my Undergraduate degree from SRM in the field of Computer science with 3.6 GPA</p>
-    				</div>
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">July 2022-July 2023</span>
-    					<h2>Software Engineer</h2>
-    					<span class="position">Ford India</span>
-    					<p class="mt-4">Worked as Software Engineer in the Ford GDIA Mach1ml team, responsible for deploying Machine learning models and migrating on-prem models to GCP.</p>
-    				</div>
-						
-				
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">Aug 2023-Present</span>
-    					<h2>Masters in  Computer Science</h2>
-    					<span class="position">Saint Louis University</span>
-    					<p class="mt-4">Currently pursuing my masters from SLU in the field of Computer Science.Also the recepient for gloabal graduate scholarship</p>
-    				</div>
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">Jan 2022- July 2022</span>
-    					<h2>Software Engineer Trainee</h2>
-    					<span class="position">FORD INDIA</span>
-    					<p class="mt-4">Worked as software engineer intern during my final semester of undergrad at Ford in the field of AI/ML for model deployments using cloud and on-prem services</p>
-    				</div>
-    		
-    		</div>
+		<div class="row equal-height-row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate custom-box">
+					<div class="box-container" style="background-image:url(images/srm.png);">
+						<div class="box-content">
+							<span class="date">June 2018- May 2022</span>
+							<h2>Bachelor of Technology in Computer Science</h2>
+							<span class="position">SRM University Chennai</span>
+							<p class="mt-4">Gained my Undergraduate degree from SRM in the field of Computer science with 3.6 GPA</p>
+						</div>
+					</div>
+				</div>
+				<div class="resume-wrap ftco-animate custom-box">
+					<div class="box-container" style="background-image: url('images/Ford-Logo.png');">
+						<div class="box-content">
+							<span class="date">July 2022-July 2023</span>
+							<h2>Software Engineer</h2>
+							<span class="position">Ford India</span>
+							<p class="mt-4">Worked as Software Engineer in the Ford GDIA Mach1ml team, responsible for deploying Machine learning models and migrating on-prem models to GCP.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate custom-box">
+					<div class="box-container" style="background-image: url('images/slu.png');">
+						<div class="box-content">
+							<span class="date">Aug 2023-Present</span>
+							<h2>Masters in  Computer Science</h2>
+							<span class="position">Saint Louis University</span>
+							<p class="mt-4">Currently pursuing my masters from SLU in the field of Computer Science. Also the recipient of the global graduate scholarship</p>
+						</div>
+					</div>
+				</div>
+				<div class="resume-wrap ftco-animate custom-box">
+					<div class="box-container" style="background-image: url('images/verzeo.png');">
+						<div class="box-content">
+							<span class="date">Jan 2022- July 2022</span>
+							<h2>Software Engineer Trainee</h2>
+							<span class="position">FORD INDIA</span>
+							<p class="mt-4">Worked as software engineer intern during my final semester of undergrad at Ford in the field of AI/ML for model deployments using cloud and on-prem services</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
     		<div class="row justify-content-center mt-5">
     			<div class="col-md-6 text-center ftco-animate">
     				<p><a href="certificates/Saai-mainCV.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
@@ -182,17 +457,18 @@
 			<div class="container">
 				<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Skills</h1>
+          	<!-- <h1 class="big big-2">Skills</h1> -->
             <h2 class="mb-4">My Skills</h2>
-			<p>
-			<ul>
-				<li>Docker: Proficient in using Docker to containerize and deploy applications, enabling efficient and scalable software delivery.</li>
-				<li>Kubernetes: Experienced in managing containerized applications using Kubernetes, ensuring high availability and fault tolerance in distributed systems.</li>
-				<li>Machine Learning: Skilled in developing and implementing machine learning models for data analysis and predictive analytics, with knowledge of popular libraries like TensorFlow and scikit-learn.</li>
-				<li>Basic HTML and CSS: Familiar with front-end web development using HTML and CSS to create responsive and visually appealing web pages.</li>
+			
+			<ul style="list-style-type: none; padding: 0; display: flex; flex-direction: row;">
+				<li style="margin-right: 20px;">Docker: Proficient in using Docker to containerize and deploy applications, enabling efficient and scalable software delivery.</li>
+				<li style="margin-right: 20px;">Kubernetes: Experienced in managing containerized applications using Kubernetes, ensuring high availability and fault tolerance in distributed systems.</li>
+				<li style="margin-right: 20px;">Machine Learning: Skilled in developing and implementing machine learning models for data analysis and predictive analytics, with knowledge of popular libraries like TensorFlow and scikit-learn.</li>
+				<li style="margin-right: 20px;">Basic HTML and CSS: Familiar with front-end web development using HTML and CSS to create responsive and visually appealing web pages.</li>
 				<li>Python: Proficient in Python programming, utilizing it for web development, data processing, and automation, along with popular libraries like NumPy and Pandas for data manipulation and analysis.</li>
 			  </ul>
-			</p>
+			  
+			  
           </div>
         </div>
 				<div class="row">
@@ -253,7 +529,7 @@
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Kubernetes</h3>
+							<h3 >Kubernetes</h3>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
@@ -271,7 +547,7 @@
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Projects</h1>
+          	<!-- <h1 class="big big-2">Projects</h1> -->
             <h2 class="mb-4">My Projects</h2>
             <p>These are some of my major and minor projects.</p>
           </div>
@@ -325,7 +601,7 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Certifications</h1>
+            <!-- <h1 class="big big-2">Certifications</h1> -->
             <h2 class="mb-4">My Certifications</h2>
             <p>During my college and work days I have completed several certifications from coursera on GCP,Kubernetes,Docker and Machine learning</p>
           </div>
@@ -492,7 +768,7 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
+            <!-- <h1 class="big big-2">Contact</h1> -->
             <h2 class="mb-4">Contact Me</h2>
             <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
           </div>
@@ -514,7 +790,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://1234567920">+ 1(720)5374530</a></p>
+	            <p>+ 1(720)5374530</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -523,7 +799,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">sa.saaisathish@gmail.com</a></p>
+	            <p>sa.saaisathish@gmail.com</p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -532,12 +808,14 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Website</h3>
-	            <p><a href="#">https://saaisathish.github.io/Portfolio/</a></p>
+	            <p>https://saaisathish.github.io/Portfolio/</p>
 	          </div>
           </div>
         </div>
-
-        <!-- <div class="row no-gutters block-9">
+<!-- <div class="google-form-embed">
+	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-cHsayNShwk-woWBqdn6iypm7t7rmD5wgMSNeRmKQF-aKUQ/viewform?embedded=true" width="900" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+        <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
             <form action="#" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
@@ -564,9 +842,19 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+		 -->
+		 <div class="row no-gutters block-9">
+			<div class="col-md-6 order-md-last d-flex">
+				<!-- Embed the Google Form -->
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-cHsayNShwk-woWBqdn6iypm7t7rmD5wgMSNeRmKQF-aKUQ/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			</div>
 		
-
+			<div class="col-md-6 d-flex">
+				<div class="img" style="background-image: url(images/contact.jpg);height: 500px;"></div>
+			</div>
+		</div>
+		
     <!-- <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -633,7 +921,32 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script>
+// DOMContentLoaded event to ensure DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
 
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  const storedTheme = localStorage.getItem('theme');
+  if (storedTheme === 'dark') {
+    toggle.checked = true;
+    document.body.classList.add('dark-mode');
+  } else {
+    toggle.checked = false;
+  }
+});
+
+
+  </script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
